@@ -4,9 +4,14 @@ class Solution:
         longest=0
 
         for n in numSet:
-            length=0
             if (n-1) not in numSet:
-                while(n+length) in numSet:
+                curr=n
+                length=1
+                while(curr+1) in numSet:
+                    curr+=1
                     length+=1
                 longest=max(length,longest)
         return longest
+
+
+        
